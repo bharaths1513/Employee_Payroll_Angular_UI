@@ -1,0 +1,48 @@
+<body>
+    <header class="header-content header">
+      <div class="logo-content">
+        <img src="./assets/images/logo.png" alt="logo">
+        <div>
+          <span class="emp-text">EMPLOYEE</span><br>
+          <span class="emp-text emp-payroll">PAYROLL</span>
+        </div>
+      </div>
+    </header>
+    <div class="main-content">
+      <div class="header-content employee-header">
+        <div class="emp-detail-text">
+          Employee Details
+          <div class="emp-count">10</div>
+        </div>
+        <a class="add-button"  routerLink="/empLogin">
+          <img src="./assets/icons/icons8-plus-+.svg" alt="">Add User
+        </a>
+        </div>
+        <div class="table-main">
+          <table id="display" class="table">
+              <tr>
+                  <th>Name</th>
+                  <th>Gender</th>
+                  <th>Department</th>
+                  <th>Salary</th>
+                  <th>Start Date</th>
+                  <th>Actions</th>
+              </tr>
+              <tr>
+                  <td>Bharath</td>
+                  <td>male</td>
+                  <td>
+                      <div class="dept-label">HR</div>
+                      <div class="dept-label">Engineer</div>
+                  </td>
+                  <td>400000</td>
+                  <td>12 Mar 2020</td>
+                  <td>
+                      <img onclick="remove(this)" alt="delete" src="./assets/icons/delete-black-18dp.svg">
+                      <img onclick="update(this)" alt="edit" src="./assets/icons/create-black-18dp.svg">
+                  </td>
+              </tr>
+          </table>
+      </div>
+    </div>
+    </body>
