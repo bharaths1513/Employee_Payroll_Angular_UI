@@ -12,14 +12,18 @@ import {FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DahboardComponent } from './components/dahboard/dahboard.component';
-
+import { LoginComponent } from './components/login/login.component';
+import {HttpClientModule} from '@angular/common/http';
+import { UpdateComponent } from './components/update/update.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpFromComponent,
-    DahboardComponent
+    DahboardComponent,
+    LoginComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { DahboardComponent } from './components/dahboard/dahboard.component';
     MatDatepickerModule,
     MatInputModule,
     MatNativeDateModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

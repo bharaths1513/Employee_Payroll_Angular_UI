@@ -15,31 +15,44 @@
           <div class="emp-count">10</div>
         </div>
         <a class="add-button"  routerLink="/empLogin">
-          <img src="./assets/icons/icons8-plus-+.svg" alt="">Add User
+          <!-- <img src="./assets/icons/icons8-plus-+.svg" alt=""> -->
+          Add User
         </a>
         </div>
         <div class="table-main">
           <table id="display" class="table">
               <tr>
+                  <!-- <th>EmployeeId</th> -->
                   <th>Name</th>
                   <th>Gender</th>
-                  <th>Department</th>
+                  <th>ProfilePic</th>
                   <th>Salary</th>
-                  <th>Start Date</th>
+                  <th>Departments</th>
+                  <th>Email-Id</th>
+                  <th>Password</th>
+                  <th>Note</th>
                   <th>Actions</th>
               </tr>
-              <tr>
-                  <td>Bharath</td>
-                  <td>male</td>
+              <tr *ngFor="let employee of EmployeesList ">
+                  <!-- <td>{{employee.employeeId}}</td> -->
+      
+                  <td>{{employee.name}}</td>
                   <td>
-                      <div class="dept-label">HR</div>
-                      <div class="dept-label">Engineer</div>
+                    {{employee.gender}}
                   </td>
-                  <td>400000</td>
-                  <td>12 Mar 2020</td>
                   <td>
-                      <img onclick="remove(this)" alt="delete" src="./assets/icons/delete-black-18dp.svg">
-                      <img onclick="update(this)" alt="edit" src="./assets/icons/create-black-18dp.svg">
+                    <img class="profile" src={{employee.profilePic}} alt="">
+                  </td>
+                  <td>{{employee.salary}}</td>
+                  <td>{{employee.department}}</td>
+                  <td>{{employee.emailId}}</td>
+                  <td>{{employee.password}}</td>
+                  <td>{{employee.note}}</td>
+                  
+                 
+                  <td>
+                      <img (click)="DeleteEmployee(employee.employeeId)" alt="delete" src="./assets/icons/delete-black-18dp.svg">
+                      <img  alt="edit" src="./assets/icons/create-black-18dp.svg" routerLink="/update/{{employee.employeeId}}" >
                   </td>
               </tr>
           </table>
